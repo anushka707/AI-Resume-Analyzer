@@ -1,9 +1,8 @@
-import { createContext, useCallback, useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 
 import { getCurrentUser, login as loginRequest, signup as signupRequest } from '../services/authService';
 import { clearToken, getToken, setToken } from '../utils/storage';
-
-export const AuthContext = createContext(null);
+import { AuthContext } from './auth-context';
 
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
@@ -54,4 +53,3 @@ export function AuthProvider({ children }) {
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 }
-

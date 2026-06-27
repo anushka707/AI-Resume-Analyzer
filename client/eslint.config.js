@@ -11,6 +11,7 @@ export default [
       ecmaVersion: 2020,
       globals: {
         document: 'readonly',
+        FormData: 'readonly',
         localStorage: 'readonly',
         window: 'readonly',
       },
@@ -36,4 +37,3 @@ export default [
     },
   },
 ];
-
